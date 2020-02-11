@@ -16,5 +16,4 @@ public class DemoTest1 {
 	} while( i < 10);
 	scanner.close();
     }
-
 }
