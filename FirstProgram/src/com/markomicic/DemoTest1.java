@@ -1,25 +1,18 @@
 package com.markomicic;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.LinkedList;
 
 public class DemoTest1 {
 
-    public static void main(String[] args) throws FileNotFoundException {
-	Scanner scanner = new Scanner(new File("students.txt"));
+    public static void main(String[] args) {
 	
-	List<String> students = new ArrayList<String>();
+	LinkedList<String> names = new LinkedList<String>();
+	names.push("Medo");
+	names.push("Bebo");
+	names.push("Dino");
 	
-	while(scanner.hasNextLine()) {
-	    students.add(scanner.nextLine());
-	}
-	
-	for(int i =0; i < students.size(); i++) {
-	    System.out.println("name: " + students.get(i));
-	}
-	scanner.close();
+	System.out.println(names.pop());
+	System.out.println(names.pop());
+	System.out.println(names.pop());
     }
 }
